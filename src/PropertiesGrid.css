@@ -1,0 +1,85 @@
+button.accordion {
+    background-color: rgb(234, 237, 240);
+    color: #444;
+    cursor: pointer;
+    padding: 5px 5px 5px 20px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 13px;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+button.accordion.active, button.accordion:hover {
+    background-color: #ddd;
+}
+
+.containerFirst {
+  border-top: 1px solid #ccc;
+  padding: 5px;
+}
+
+.container {
+  border-bottom: 1px solid #ccc;
+  padding: 10px;
+}
+
+label{
+  text-align: left;
+  padding-top:1.12em 0;
+  margin-top:1.12em 0;
+  margin:1.12em 0;
+}
+
+p{
+  text-align: left;
+  margin-top: 35px;
+  margin-bottom:1px;
+}
+
+div.panel {
+    display: block;
+    color: black;
+    background-color: white;
+}
+
+select{
+    width: 230px;
+    margin-left: 0;
+    background-color:rgb(234, 237, 240);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 5px;
+}
+
+.pgBody {
+  border: solid 1px #95B8E7;
+  border-spacing: 0;
+  font-family: 'verdana';
+  font-size: 12px;
+}
+
+.pgGroupCell {
+  background-color: #E0ECFF;
+  border-bottom: solid 1px #ccc;
+  font-weight: bold;
+}
+
+.pgCellName {
+  text-align: left;
+  border-bottom: solid 1px #ccc;
+  border-right: solid 1px #ccc;
+  padding: 5px;
+  width:150px;
+}
+
+.pgCellValue {
+  text-align: left;
+  border-bottom:solid 1px #ccc;
+  background-color: rgb(234, 237, 240);
+  padding: 5px;
+  width: 150px;
+}
