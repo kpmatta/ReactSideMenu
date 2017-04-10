@@ -3,6 +3,7 @@ import './SettingsMenu.css';
 import SettingsMenuItem from './SettingsMenuItem';
 import SettingsMenuItemHeader from './SettingsMenuItemHeader';
 import RenderSettings from './RenderSettings';
+import PropertiesGrid from './PropertiesGrid';
 
 class SettingsMenu extends Component {
   constructor(props) {
@@ -39,8 +40,8 @@ class SettingsMenu extends Component {
 
   }
 
-  miscClick() {
-
+  propClick() {
+    this.setState({menuType: "properties-menu"});
   }
 
   ConditionalMenu() {
@@ -59,13 +60,16 @@ class SettingsMenu extends Component {
           <SettingsMenuItem onClick={this.envronmentClick.bind(this)} >Environment Settings</SettingsMenuItem>
           <SettingsMenuItem onClick={this.displayClick.bind(this)} >Display Settings</SettingsMenuItem>
           <SettingsMenuItem onClick={this.selectionClick.bind(this)} >Selection Settings</SettingsMenuItem>
-          <SettingsMenuItem onClick={this.miscClick.bind(this)} >Misc Settings</SettingsMenuItem>
+          <SettingsMenuItem onClick={this.propClick.bind(this)} >Properties...</SettingsMenuItem>
         </div>
       )
-    } else if (this.state.menuType === "render-menu") {
+    }
+    else if (this.state.menuType === "render-menu") {
       renderObj = (<RenderSettings onClick={this.setMainmenu.bind(this)} />)
     }
-
+    else if( this.state.menuType === "properties-menu") {
+      renderObj = (<PropertiesGrid onClick={this.setMainmenu.bind(this)} />)
+    }
     return (
       <div className={visibleStateClass}>
         { renderObj }
